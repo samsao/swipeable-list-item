@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SwipeableListItem</string>
+    <string name="title_activity_main">Fruits!</string>
+</resources>
