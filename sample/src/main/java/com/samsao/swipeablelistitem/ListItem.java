@@ -24,7 +24,7 @@ public class ListItem extends SwipeableView {
         /**
          * All your customization here
          */
-        setRightSwipeBackground(ContextCompat.getDrawable(getContext(), android.R.color.holo_red_light));
+        setRightSwipeBackground(ContextCompat.getDrawable(getContext(), R.color.red));
         setRightSwipeText("delete");
         setRightSwipeTextColor(ContextCompat.getColor(getContext(), android.R.color.white));
         setRightSwipeTextSize((int) getResources().getDimension(R.dimen.font_size));
@@ -39,7 +39,6 @@ public class ListItem extends SwipeableView {
 
     public void setup(Fruit fruit, LeftSwipeListener swipeListener) {
         setLeftSwipeListener(swipeListener);
-
         mFruitNameTextView.setText(fruit.getName());
         mLayout.setBackgroundColor(fruit.getColor());
     }
