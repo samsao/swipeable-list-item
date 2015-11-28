@@ -304,7 +304,7 @@ public abstract class SwipeableView extends FrameLayout {
      * @param drawable
      */
     public void setRightSwipeBackground(@DrawableRes Drawable drawable) {
-        mRightView.setBackground(drawable);
+        setViewBackground(mRightView, drawable);
         mRightBackground = drawable;
     }
 
@@ -313,7 +313,7 @@ public abstract class SwipeableView extends FrameLayout {
      * @param drawable
      */
     public void setLeftSwipeBackground(@DrawableRes Drawable drawable) {
-        mLeftView.setBackground(drawable);
+        setViewBackground(mLeftView, drawable);
         mLeftBackground = drawable;
     }
 
@@ -372,7 +372,7 @@ public abstract class SwipeableView extends FrameLayout {
         frameLayout.addView(imageView);
         imageView.setImageDrawable(leftDrawable);
         mRightView = frameLayout;
-        mRightView.setBackground(mRightBackground);
+        setViewBackground(mRightView, mRightBackground);
         mRightView.setPadding(mRightPadding[0], mRightPadding[1], mRightPadding[2], mRightPadding[3]);
         setupLeftRightViews();
     }
@@ -391,7 +391,7 @@ public abstract class SwipeableView extends FrameLayout {
         frameLayout.addView(imageView);
         imageView.setImageDrawable(leftDrawable);
         mLeftView = frameLayout;
-        mLeftView.setBackground(mLeftBackground);
+        setViewBackground(mLeftView, mLeftBackground);
         mLeftView.setPadding(mLeftPadding[0], mLeftPadding[1], mLeftPadding[2], mLeftPadding[3]);
         setupLeftRightViews();
     }
@@ -462,5 +462,13 @@ public abstract class SwipeableView extends FrameLayout {
      */
     public void setLeftSwipeTextTypeface(Typeface typeface) {
         mLeftTextView.setTypeface(typeface);
+    }
+
+    private void setViewBackground(View view, Drawable drawable) {
+        if(android.os.Build.VERSION.SDK_INT > android.os.Build.VERSION_CODES.JELLY_BEAN) {
+            view.setBackground(drawable);
+        } else {
+            view.setBackgroundDrawable(drawable);
+        }
     }
 }
