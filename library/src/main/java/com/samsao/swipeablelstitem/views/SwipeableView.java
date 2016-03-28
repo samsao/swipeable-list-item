@@ -230,6 +230,7 @@ public abstract class SwipeableView extends FrameLayout {
                             if (mLeftSwipeListener != null) {
                                 mLeftSwipeListener.onLeftSwipe();
                             }
+                            mContent.animate().setListener(null);
                         }
 
                         @Override
@@ -243,6 +244,11 @@ public abstract class SwipeableView extends FrameLayout {
         }
     }
 
+
+    ///////////////////
+    // FUNCTIONALITY //
+    ///////////////////
+
     /**
      * Unswipe view with animation
      */
@@ -251,11 +257,6 @@ public abstract class SwipeableView extends FrameLayout {
                 .setInterpolator(new AccelerateInterpolator())
                 .setDuration(ANIMATION_DURATION);
     }
-
-
-    ///////////////////
-    // FUNCTIONALITY //
-    ///////////////////
 
     /**
      * Unswipe view with no animation
