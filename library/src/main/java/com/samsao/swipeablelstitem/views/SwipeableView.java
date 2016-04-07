@@ -168,7 +168,7 @@ public abstract class SwipeableView extends FrameLayout {
         if (delta >= 0) {
             if (mRightSwipeListener != null) {
                 if (Math.abs(delta) < SWIPE_RELEASE_THRESHOLD) {
-                    resetWithAnimationContentPosition();
+                    resetSwipeWithAnimation();
                 } else {
                     rightSwipe(delta);
                 }
@@ -176,7 +176,7 @@ public abstract class SwipeableView extends FrameLayout {
         } else {
             if (mLeftSwipeListener != null) {
                 if (Math.abs(delta) < SWIPE_RELEASE_THRESHOLD) {
-                    resetWithAnimationContentPosition();
+                    resetSwipeWithAnimation();
                 } else {
                     leftSwipe(delta);
                 }
@@ -252,7 +252,7 @@ public abstract class SwipeableView extends FrameLayout {
     /**
      * Unswipe view with animation
      */
-    public void resetWithAnimationContentPosition() {
+    public void resetSwipeWithAnimation() {
         mContent.animate().translationXBy(-mContent.getX())
                 .setInterpolator(new AccelerateInterpolator())
                 .setDuration(ANIMATION_DURATION);
