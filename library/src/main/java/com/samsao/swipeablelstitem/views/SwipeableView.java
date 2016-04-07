@@ -21,8 +21,6 @@ import android.widget.TextView;
 
 import com.samsao.swipeablelstitem.R;
 
-import butterknife.ButterKnife;
-
 
 /**
  * Created by lcampos on 2015-11-05.
@@ -104,7 +102,6 @@ public abstract class SwipeableView extends FrameLayout {
         setLeftSwipePadding((int) getResources().getDimension(R.dimen.default_spacing), 0, 0, 0);
         setRightSwipePadding(0, 0, (int) getResources().getDimension(R.dimen.default_spacing), 0);
 
-        ButterKnife.bind(this);
         setLayoutParams(new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         setOnClickListener(new OnClickListener() {
             @Override

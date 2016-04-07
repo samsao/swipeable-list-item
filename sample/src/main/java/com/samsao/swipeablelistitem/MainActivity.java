@@ -14,8 +14,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity{
 
-    private ListAdapter mListAdapter;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,8 +23,8 @@ public class MainActivity extends AppCompatActivity{
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
-        mListAdapter = new ListAdapter(this, getFruitsList());
-        recyclerView.setAdapter(mListAdapter);
+        ListAdapter listAdapter = new ListAdapter(this, getFruitsList());
+        recyclerView.setAdapter(listAdapter);
 
         //Swipe config
         recyclerView.addOnItemTouchListener(new SwipeableListOnItemTouchListener());
