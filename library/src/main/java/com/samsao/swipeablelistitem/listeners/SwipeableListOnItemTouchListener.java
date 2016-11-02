@@ -1,10 +1,11 @@
-package com.samsao.swipeablelstitem.listeners;
+package com.samsao.swipeablelistitem.listeners;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.samsao.swipeablelstitem.views.SwipeableView;
+import com.samsao.swipeablelistitem.views.SwipeableView;
+
 
 /**
  * Created by lcampos on 2015-11-05.

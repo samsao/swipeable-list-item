@@ -1,4 +1,4 @@
-package com.samsao.swipeablelistitem;
+package com.samsao.swipeablelistitemsample;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -6,8 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.samsao.swipeablelistitem.model.Fruit;
-import com.samsao.swipeablelstitem.listeners.SwipeableListOnItemTouchListener;
+import com.samsao.swipeablelistitem.listeners.SwipeableListOnItemTouchListener;
+import com.samsao.swipeablelistitemsample.model.Fruit;
 
 import java.util.ArrayList;
 import java.util.List;

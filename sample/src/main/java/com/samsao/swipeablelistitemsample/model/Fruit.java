@@ -1,4 +1,4 @@
-package com.samsao.swipeablelistitem.model;
+package com.samsao.swipeablelistitemsample.model;
 
 /**
  * Created by lcampos on 2015-11-23.

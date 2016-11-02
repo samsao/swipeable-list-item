@@ -1,4 +1,4 @@
-package com.samsao.swipeablelistitem;
+package com.samsao.swipeablelistitemsample;
 
 import android.content.Context;
 import android.support.v4.content.ContextCompat;
@@ -7,8 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.samsao.swipeablelistitem.model.Fruit;
-import com.samsao.swipeablelstitem.views.SwipeableView;
+import com.samsao.swipeablelistitem.views.SwipeableView;
+import com.samsao.swipeablelistitemsample.model.Fruit;
 
 /**
  * Created by lcampos on 2015-11-23.
@@ -37,7 +37,7 @@ public class ListItem extends SwipeableView {
         return mLayout;
     }
 
-    public void setup(Fruit fruit, LeftSwipeListener swipeListener) {
+    public void setup(Fruit fruit, SwipeableView.LeftSwipeListener swipeListener) {
         setLeftSwipeListener(swipeListener);
         mFruitNameTextView.setText(fruit.getName());
         mLayout.setBackgroundColor(fruit.getColor());

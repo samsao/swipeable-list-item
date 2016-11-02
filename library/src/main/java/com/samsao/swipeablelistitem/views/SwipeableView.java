@@ -1,4 +1,4 @@
-package com.samsao.swipeablelstitem.views;
+package com.samsao.swipeablelistitem.views;
 
 import android.animation.Animator;
 import android.annotation.TargetApi;
@@ -6,8 +6,6 @@ import android.content.Context;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.ColorInt;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.LayoutRes;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -19,7 +17,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.samsao.swipeablelstitem.R;
+import com.samsao.swipeablelistitem.R;
 
 
 /**
@@ -289,7 +287,6 @@ public abstract class SwipeableView extends FrameLayout {
     /**
      * @return the layout resource
      */
-    @LayoutRes
     protected abstract View getContent(ViewGroup parent);
 
 
@@ -301,7 +298,7 @@ public abstract class SwipeableView extends FrameLayout {
      * Changes the background of the view that shows when swiping left (if not custom)
      * @param drawable
      */
-    public void setRightSwipeBackground(@DrawableRes Drawable drawable) {
+    public void setRightSwipeBackground(Drawable drawable) {
         setViewBackground(mRightView, drawable);
         mRightBackground = drawable;
     }
@@ -310,7 +307,7 @@ public abstract class SwipeableView extends FrameLayout {
      * Changes the background of the view that shows when swiping right (if not custom)
      * @param drawable
      */
-    public void setLeftSwipeBackground(@DrawableRes Drawable drawable) {
+    public void setLeftSwipeBackground(Drawable drawable) {
         setViewBackground(mLeftView, drawable);
         mLeftBackground = drawable;
     }

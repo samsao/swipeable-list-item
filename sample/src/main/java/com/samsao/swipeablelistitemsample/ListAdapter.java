@@ -1,11 +1,11 @@
-package com.samsao.swipeablelistitem;
+package com.samsao.swipeablelistitemsample;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
-import com.samsao.swipeablelistitem.model.Fruit;
-import com.samsao.swipeablelstitem.views.SwipeableView;
+import com.samsao.swipeablelistitem.views.SwipeableView;
+import com.samsao.swipeablelistitemsample.model.Fruit;
 
 import java.util.List;
 
