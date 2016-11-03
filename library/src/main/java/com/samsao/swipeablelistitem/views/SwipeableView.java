@@ -195,6 +195,7 @@ public abstract class SwipeableView extends FrameLayout {
                             if (mRightSwipeListener != null) {
                                 mRightSwipeListener.onRightSwipe();
                             }
+                            mContent.animate().setListener(null);
                         }
 
                         @Override
