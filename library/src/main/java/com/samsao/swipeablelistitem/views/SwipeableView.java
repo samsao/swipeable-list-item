@@ -297,6 +297,7 @@ public abstract class SwipeableView extends FrameLayout {
 
     /**
      * Changes the background of the view that shows when swiping left (if not custom)
+     *
      * @param drawable
      */
     public void setRightSwipeBackground(Drawable drawable) {
@@ -306,6 +307,7 @@ public abstract class SwipeableView extends FrameLayout {
 
     /**
      * Changes the background of the view that shows when swiping right (if not custom)
+     *
      * @param drawable
      */
     public void setLeftSwipeBackground(Drawable drawable) {
@@ -315,9 +317,10 @@ public abstract class SwipeableView extends FrameLayout {
 
     /**
      * Sets the padding of the text or icon of the view that shows when swiping right
-     * @param left padding
-     * @param top padding
-     * @param right padding
+     *
+     * @param left   padding
+     * @param top    padding
+     * @param right  padding
      * @param bottom padding
      */
     public void setLeftSwipePadding(int left, int top, int right, int bottom) {
@@ -327,9 +330,10 @@ public abstract class SwipeableView extends FrameLayout {
 
     /**
      * Sets the padding of the text or icon of the view that shows when swiping left
-     * @param left padding
-     * @param top padding
-     * @param right padding
+     *
+     * @param left   padding
+     * @param top    padding
+     * @param right  padding
      * @param bottom padding
      */
     public void setRightSwipePadding(int left, int top, int right, int bottom) {
@@ -339,6 +343,7 @@ public abstract class SwipeableView extends FrameLayout {
 
     /**
      * Sets a custom view that shows when swiping to right
+     *
      * @param leftCustomView
      */
     public void setLeftCustomView(View leftCustomView) {
@@ -348,6 +353,7 @@ public abstract class SwipeableView extends FrameLayout {
 
     /**
      * Sets a custom view that shows when swiping left
+     *
      * @param rightCustomView
      */
     public void setRightCustomView(View rightCustomView) {
@@ -357,12 +363,13 @@ public abstract class SwipeableView extends FrameLayout {
 
     /**
      * Sets an icon to be shown when swiping left
+     *
      * @param leftDrawable
      */
     public void setRightDrawable(Drawable leftDrawable) {
         FrameLayout frameLayout = new FrameLayout(getContext());
         LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-        params.gravity = Gravity.RIGHT | Gravity.CENTER_VERTICAL ;
+        params.gravity = Gravity.RIGHT | Gravity.CENTER_VERTICAL;
         ImageView imageView = new ImageView(getContext());
         imageView.setLayoutParams(params);
         frameLayout.addView(imageView);
@@ -375,13 +382,14 @@ public abstract class SwipeableView extends FrameLayout {
 
     /**
      * Sets an icon to be shown when swiping right
+     *
      * @param leftDrawable
      */
     public void setLeftDrawable(Drawable leftDrawable) {
         FrameLayout frameLayout = new FrameLayout(getContext());
         frameLayout.setLayoutParams(new ViewGroup.LayoutParams(100, 100));
         LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-        params.gravity = Gravity.LEFT | Gravity.CENTER_VERTICAL ;
+        params.gravity = Gravity.LEFT | Gravity.CENTER_VERTICAL;
         ImageView imageView = new ImageView(getContext());
         imageView.setLayoutParams(params);
         frameLayout.addView(imageView);
@@ -394,6 +402,7 @@ public abstract class SwipeableView extends FrameLayout {
 
     /**
      * Sets a text to be shown when swiping right
+     *
      * @param text
      */
     public void setLeftSwipeText(String text) {
@@ -404,6 +413,7 @@ public abstract class SwipeableView extends FrameLayout {
 
     /**
      * Sets a text to be shown when swiping left
+     *
      * @param text
      */
     public void setRightSwipeText(String text) {
@@ -414,6 +424,7 @@ public abstract class SwipeableView extends FrameLayout {
 
     /**
      * Sets the text color of the text to be shown when swiping right
+     *
      * @param textColor
      */
     public void setLeftSwipeTextColor(@ColorInt int textColor) {
@@ -422,6 +433,7 @@ public abstract class SwipeableView extends FrameLayout {
 
     /**
      * Sets the text color of the text to be shown when swiping left
+     *
      * @param textColor
      */
     public void setRightSwipeTextColor(@ColorInt int textColor) {
@@ -430,6 +442,7 @@ public abstract class SwipeableView extends FrameLayout {
 
     /**
      * Sets the text size of the text to be shown when swiping right
+     *
      * @param textSize
      */
     public void setLeftSwipeTextSize(int textSize) {
@@ -438,6 +451,7 @@ public abstract class SwipeableView extends FrameLayout {
 
     /**
      * Sets the text size of the text to be shown when swiping left
+     *
      * @param textSize
      */
     public void setRightSwipeTextSize(int textSize) {
@@ -446,6 +460,7 @@ public abstract class SwipeableView extends FrameLayout {
 
     /**
      * Sets the text typeface of the text to be shown when swiping left
+     *
      * @param typeface
      */
     public void setRightSwipeTextTypeface(Typeface typeface) {
@@ -454,6 +469,7 @@ public abstract class SwipeableView extends FrameLayout {
 
     /**
      * Sets the text typeface of the text to be shown when swiping right
+     *
      * @param typeface
      */
     public void setLeftSwipeTextTypeface(Typeface typeface) {
@@ -461,7 +477,7 @@ public abstract class SwipeableView extends FrameLayout {
     }
 
     private void setViewBackground(View view, Drawable drawable) {
-        if(android.os.Build.VERSION.SDK_INT > android.os.Build.VERSION_CODES.JELLY_BEAN) {
+        if (android.os.Build.VERSION.SDK_INT > android.os.Build.VERSION_CODES.JELLY_BEAN) {
             view.setBackground(drawable);
         } else {
             view.setBackgroundDrawable(drawable);
