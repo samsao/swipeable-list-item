@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Created by lcampos on 2015-11-23.
  */
-public class ListAdapter extends RecyclerView.Adapter<ListAdapter.Holder>{
+public class ListAdapter extends RecyclerView.Adapter<ListAdapter.Holder> {
 
     private final Context mContext;
     private final List<Fruit> mData;
